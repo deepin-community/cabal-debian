@@ -1,15 +1,83 @@
-Source: template-repository
-Section: unknown
+Source: cabal-debian
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Clint Adams <clint@debian.org>,
+ Ilias Tsitsimpis <iliastsi@debian.org>,
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends: debhelper (>= 10),
+ haskell-devscripts (>= 0.13),
+ cdbs,
+ ghc (>= 9),
+ ghc-prof,
+ libghc-diff-dev (>= 0.3.1),
+ libghc-diff-prof,
+ libghc-hunit-dev,
+ libghc-hunit-prof,
+ libghc-ansi-wl-pprint-dev (>= 0.6),
+ libghc-ansi-wl-pprint-dev (<< 0.7),
+ libghc-ansi-wl-pprint-prof,
+ libghc-bifunctors-dev,
+ libghc-bifunctors-prof,
+ libghc-data-default-dev,
+ libghc-data-default-prof,
+ libghc-debian-dev (>= 4.0.5),
+ libghc-debian-prof,
+ libghc-exceptions-dev,
+ libghc-exceptions-prof,
+ libghc-hsemail-dev (>= 2),
+ libghc-hsemail-prof,
+ libghc-lens-dev,
+ libghc-lens-prof,
+ libghc-network-uri-dev,
+ libghc-network-uri-prof,
+ libghc-newtype-generics-dev (>= 0.4),
+ libghc-newtype-generics-prof,
+ libghc-optparse-applicative-dev (>= 0.11),
+ libghc-optparse-applicative-dev (<< 0.18),
+ libghc-optparse-applicative-prof,
+ libghc-puremd5-dev,
+ libghc-puremd5-prof,
+ libghc-regex-tdfa-dev,
+ libghc-regex-tdfa-prof,
+ libghc-syb-dev,
+ libghc-syb-prof,
+ libghc-unliftio-dev (>= 0.2.8.0),
+ libghc-unliftio-prof,
+ libghc-utf8-string-dev,
+ libghc-utf8-string-prof,
+Build-Depends-Indep: ghc-doc,
+ libghc-diff-doc,
+ libghc-hunit-doc,
+ libghc-ansi-wl-pprint-doc,
+ libghc-bifunctors-doc,
+ libghc-data-default-doc,
+ libghc-debian-doc,
+ libghc-exceptions-doc,
+ libghc-hsemail-doc,
+ libghc-lens-doc,
+ libghc-network-uri-doc,
+ libghc-newtype-generics-doc,
+ libghc-optparse-applicative-doc,
+ libghc-puremd5-doc,
+ libghc-regex-tdfa-doc,
+ libghc-syb-doc,
+ libghc-unliftio-doc,
+ libghc-utf8-string-doc,
+Standards-Version: 4.6.2
+Homepage: https://github.com/clinty/cabal-debian
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/cabal-debian
 
-Package: template-repository
+Package: cabal-debian
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Section: utils
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends: apt-file,
+Description: Create a debianization for a cabal package
+ Tool for creating debianizations of Haskell packages based on the .cabal
+ file.  If apt-file is installed it will use it to discover what is the
+ Debian package name of a C library.
