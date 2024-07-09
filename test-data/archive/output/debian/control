@@ -1,0 +1,29 @@
+Source: seereason-darcs-backups
+Priority: extra
+Maintainer: David Fox <dsf@seereason.com>
+Section: haskell
+Build-Depends: debhelper (>= 9)
+               , haskell-devscripts-minimal | haskell-devscripts (>= 0.8)
+               , cdbs
+               , ghc
+	       , ghc-prof
+               , libghc-extra-dev
+               , libghc-archive-dev (>= 1.7)
+               , libghc-network-dev
+Standards-Version: 3.8.1
+X-Description: Backups of the seereason darcs repositories
+ Install this somewhere other than where the server is running get
+ automated backups of the database.
+
+Package: seereason-darcs-backups
+Architecture: any
+Section: misc
+Depends: ${haskell:Depends}, ${misc:Depends}, anacron
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Conflicts: ${haskell:Conflicts}
+Provides: ${haskell:Provides}
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}

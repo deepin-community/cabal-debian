@@ -1,5 +1,328 @@
-template-repository (1.0-1) unstable; urgency=medium
+cabal-debian (5.2.2-1) unstable; urgency=medium
 
-  * Initial release
+  [ Ilias Tsitsimpis ]
+  * Declare compliance with Debian policy 4.6.2
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Clint Adams ]
+  * New upstream version.
+
+ -- Clint Adams <clint@debian.org>  Thu, 21 Sep 2023 14:37:48 -0400
+
+cabal-debian (5.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Clint Adams <clint@debian.org>  Tue, 26 Jul 2022 09:02:26 -0400
+
+cabal-debian (5.1.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Clint Adams <clint@debian.org>  Mon, 25 Jul 2022 08:34:47 -0400
+
+cabal-debian (5.1-1) unstable; urgency=medium
+
+  [ Ilias Tsitsimpis ]
+  * Declare compliance with Debian policy 4.6.1
+
+  [ Clint Adams ]
+  * New upstream release
+
+ -- Clint Adams <clint@debian.org>  Thu, 30 Jun 2022 10:27:44 -0400
+
+cabal-debian (5.0.3-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Clint Adams <clint@debian.org>  Sun, 28 Jun 2020 18:30:41 -0400
+
+cabal-debian (5.0.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Tue, 26 May 2020 09:24:27 -0700
+
+cabal-debian (5.0-1) unstable; urgency=medium
+
+  [ Ilias Tsitsimpis ]
+  * Remove Dmitry Bogatov from Uploaders per his request. Thank you
+    Dmitry for your previous maintainership.
+
+  [ Clint Adams ]
+  * New upstream release
+
+ -- Clint Adams <clint@debian.org>  Sat, 31 Aug 2019 09:55:11 -0400
+
+cabal-debian (4.38.5-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Clint Adams <clint@debian.org>  Sun, 28 Jul 2019 19:03:59 -0400
+
+cabal-debian (4.38.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * Set license to BSD-3-clause
+
+ -- Ilias Tsitsimpis <iliastsi@debian.org>  Thu, 01 Nov 2018 15:02:20 +0200
+
+cabal-debian (4.38.1-3) unstable; urgency=medium
+
+  * Remove build dependency on libghc-parsec3-dev (provided by ghc-
+    8.4.3)
+
+ -- Ilias Tsitsimpis <iliastsi@debian.org>  Wed, 03 Oct 2018 12:06:10 +0300
+
+cabal-debian (4.38.1-2) unstable; urgency=medium
+
+  * Remove build dependency on libghc-mtl-dev (provided by ghc-8.4.3)
+  * Remove build dependency on libghc-text-dev (provided by ghc-8.4.3)
+
+ -- Ilias Tsitsimpis <iliastsi@debian.org>  Mon, 01 Oct 2018 13:47:24 +0300
+
+cabal-debian (4.38.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Ilias Tsitsimpis <iliastsi@debian.org>  Sat, 29 Sep 2018 14:12:40 +0300
+
+cabal-debian (4.38-1) unstable; urgency=medium
+
+  [ Clint Adams ]
+  * Set Rules-Requires-Root to no.
+
+  [ Ilias Tsitsimpis ]
+  * New upstream release
+  * Bump debhelper compat level to 10
+  * Drop fix-utils-shlibs-depends patch, applied upstream
+
+ -- Ilias Tsitsimpis <iliastsi@debian.org>  Mon, 11 Jun 2018 15:20:11 +0300
+
+cabal-debian (4.36.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Clint Adams <clint@debian.org>  Sun, 15 Apr 2018 11:13:59 -0400
+
+cabal-debian (4.36-2) unstable; urgency=medium
+
+  [ Ilias Tsitsimpis ]
+  * Change Priority to optional. Since Debian Policy version 4.0.1,
+    priority extra has been deprecated.
+  * Use the HTTPS form of the copyright-format URL
+  * Modify d/watch and Source field in d/copyright to use HTTPS
+  * Declare compliance with Debian policy 4.1.1
+  * Use salsa.debian.org URLs in Vcs-{Browser,Git} fields
+
+  [ Clint Adams ]
+  * Bump to Standards-Version 4.1.4.
+
+ -- Clint Adams <clint@debian.org>  Mon, 09 Apr 2018 20:04:39 -0400
+
+cabal-debian (4.36-1) unstable; urgency=medium
+
+  [ Kei Hibino ]
+  * Close fixed debian bug - recover typo (closes: #850920)
+
+  [ Clint Adams ]
+  * New upstream release
+
+ -- Clint Adams <clint@debian.org>  Fri, 20 Oct 2017 21:37:31 -0400
+
+cabal-debian (4.35.6-2) unstable; urgency=medium
+
+  * Fix to generate shlibs:Depends for -utils packages
+    (closes: #866375)
+  * Close fixed debian bug (close #850920)
+
+ -- Kei Hibino <ex8k.hibino@gmail.com>  Mon, 03 Jul 2017 18:04:25 +0900
+
+cabal-debian (4.35.6-1) unstable; urgency=medium
+
+  * New upstream release (fix for #850920)
+    - drop patches, addressed upstream
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Thu, 19 Jan 2017 14:33:01 +0100
+
+cabal-debian (4.33-5) unstable; urgency=medium
+
+  * Refresh existing debian patch.
+  * Fix listing query of GHC buitin packages (closes: #850920)
+
+ -- Kei Hibino <ex8k.hibino@gmail.com>  Wed, 11 Jan 2017 21:40:52 +0900
+
+cabal-debian (4.33-4) unstable; urgency=medium
+
+  * Remove Build-Depends-Indep dependencies.
+    No architecture-independent packages are built.
+  * Replace 'debian' with 'Debian' in package description.
+  * Remove unused `binary-or-shlib-defines-rpath' lintian override.
+
+ -- Ilias Tsitsimpis <i.tsitsimpis@gmail.com>  Mon, 28 Nov 2016 17:50:34 +0200
+
+cabal-debian (4.33-3) unstable; urgency=medium
+
+  * Patch for newer Cabal.
+
+ -- Clint Adams <clint@debian.org>  Tue, 01 Nov 2016 17:44:15 -0400
+
+cabal-debian (4.33-2) unstable; urgency=medium
+
+  * Upload to unstable as part of GHC 8 transition.
+
+ -- Clint Adams <clint@debian.org>  Thu, 27 Oct 2016 18:32:13 -0400
+
+cabal-debian (4.33-1) experimental; urgency=medium
+
+  * New upstream version.
+
+ -- Clint Adams <clint@debian.org>  Sun, 09 Oct 2016 15:42:45 -0400
+
+cabal-debian (4.32.5-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Clint Adams <clint@debian.org>  Tue, 12 Jul 2016 16:13:29 -0400
+
+cabal-debian (4.32.4-1) unstable; urgency=medium
+
+  [ Dmitry Bogatov ]
+  * Use secure (https) uri in Vcs-Git field in 'debian/control'
+
+  [ Joachim Breitner ]
+  * New upstream release
+
+ -- Joachim Breitner <nomeata@debian.org>  Sat, 28 May 2016 13:25:59 +0200
+
+cabal-debian (4.31.9-2) unstable; urgency=medium
+
+  * Convert 'debian/copyright' to dep5 format
+  * Bump standards version to 3.9.8 (no changes needed)
+
+ -- Dmitry Bogatov <KAction@gnu.org>  Sat, 07 May 2016 08:23:42 +0300
+
+cabal-debian (4.31.9-1) unstable; urgency=medium
+
+  * New upstream release.
+    - No longer conflicts with newer optparse-applicative.  closes: #814992.
+
+ -- Clint Adams <clint@debian.org>  Sun, 13 Mar 2016 12:43:11 -0400
+
+cabal-debian (4.31-4) unstable; urgency=medium
+
+  * Add missing Vcs-Git/Vcs-Browser headers.
+
+ -- Clint Adams <clint@debian.org>  Thu, 03 Dec 2015 14:54:01 -0500
+
+cabal-debian (4.31-3) experimental; urgency=medium
+
+  * Depend on haskell-devscripts >= 0.10 to ensure that this package
+    builds against GHC in experimental
+
+ -- Joachim Breitner <nomeata@debian.org>  Thu, 20 Aug 2015 10:26:51 +0200
+
+cabal-debian (4.31-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Joachim Breitner <nomeata@debian.org>  Wed, 19 Aug 2015 22:25:01 +0200
+
+cabal-debian (4.30.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Kristoffer H Rose <krisrose@debian.org>  Tue, 11 Aug 2015 14:20:41 +0200
+
+cabal-debian (4.29-1) unstable; urgency=medium
+
+  * New upstream release
+  * Add usual lintian override
+
+ -- Joachim Breitner <nomeata@debian.org>  Thu, 11 Jun 2015 10:12:53 +0200
+
+cabal-debian (4.23.1-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Dmitry Bogatov <KAction@gnu.org>  Sat, 21 Feb 2015 23:26:20 +0300
+
+cabal-debian (4.17.4-4) experimental; urgency=medium
+
+  * Depend on cdbs, to make lintian happy
+
+ -- Joachim Breitner <nomeata@debian.org>  Mon, 22 Dec 2014 16:58:37 +0100
+
+cabal-debian (4.17.4-3) experimental; urgency=medium
+
+  * Redo packaging, to make use of haskell-devscripts
+
+ -- Joachim Breitner <nomeata@debian.org>  Mon, 22 Dec 2014 15:11:38 +0100
+
+cabal-debian (4.17.4-2) experimental; urgency=medium
+
+  * Depend on haskell-devscripts 0.9, found in experimental
+
+ -- Joachim Breitner <nomeata@debian.org>  Sat, 20 Dec 2014 17:09:20 +0100
+
+cabal-debian (4.17.4-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Joachim Breitner <nomeata@debian.org>  Thu, 04 Sep 2014 08:14:31 +0200
+
+cabal-debian (4.15.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * Depend on debhelper (closes: #758102)
+
+ -- Sven Bartscher <sven.bartscher@weltraumschlangen.de>  Thu, 21 Aug 2014 16:42:09 +0200
+
+cabal-debian (4.15-1) unstable; urgency=medium
+
+  * New upstream version (closes: #753183)
+  * Map dependencies to lowercase (closes: #756327)
+
+ -- Sven Bartscher <sven.bartscher@weltraumschlangen.de>  Fri, 01 Aug 2014 11:33:53 +0200
+
+cabal-debian (3.9-1) unstable; urgency=low
+
+  [ Joachim Breitner ]
+  * Adjust watch file to new hackage layout
+
+  [ Clint Adams ]
+  * New upstream version.
+
+ -- Clint Adams <clint@debian.org>  Mon, 25 Nov 2013 22:48:34 -0500
+
+cabal-debian (3.7-1) unstable; urgency=low
+
+  [ Joachim Breitner ]
+  * Depend on haskell-devscripts 0.8.13 to ensure this packages is built
+    against experimental
+  * Bump standards version, no change
+  * Enable compat level 9
+
+  [ Clint Adams ]
+  * New upstream version.
+    - Builds with newer haskell-debian.  closes: #720683.
+  * Don't use runhaskell to build.  closes: #676476.
+
+ -- Clint Adams <clint@debian.org>  Fri, 04 Oct 2013 19:41:21 -0400
+
+cabal-debian (1.25-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Clint Adams <clint@debian.org>  Tue, 19 Jun 2012 19:30:08 -0400
+
+cabal-debian (1.24-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Clint Adams <clint@debian.org>  Sat, 16 Jun 2012 15:14:54 -0400
+
+cabal-debian (1.21-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Clint Adams <clint@debian.org>  Thu, 17 May 2012 22:07:00 -0400
